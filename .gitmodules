@@ -1,0 +1,6 @@
+[submodule "firmware"]
+	path = firmware
+	url = https://github.com/gsc-archive/firmware
+[submodule "scripts/nugget-os"]
+	path = scripts/nugget-os
+	url = https://github.com/gsc-archive/nugget_os-scripts
