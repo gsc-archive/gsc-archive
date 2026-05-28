@@ -19,7 +19,7 @@ mkdir -p "${TI50_DIR}/prepvt/nuvotitan"
 /usr/bin/env bash "${SCRIPT_DIR}/download-ti50-images.sh" "${TI50_DIR}"
 
 if [ -d "${NOS_DIR}" && -d "${SCRIPT_DIR}/nugget-os" ]; then
-  # we only have citadel suppot for right now
-  # in the future, we'll want to start downloading Dauntless firmware for Pixel 6+.
-  /usr/bin/env bash "${SCRIPT_DIR}/citadel/citadel-downloader.sh" "${NOS_DIR}"
+  mkdir -p "${NOS_DIR}/citadel/prod" "${NOS_DIR}/dauntless"
+  /usr/bin/env bash "${SCRIPT_DIR}/nugget-os/citadel/citadel-downloader.sh" "${NOS_DIR}/citadel/prod"
+  /usr/bin/env bash "${SCRIPT_DIR}/nugget-os/dauntless/dauntless-downloader.sh" "${NOS_DIR}/dauntless"
 fi
